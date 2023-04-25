@@ -1,4 +1,4 @@
 # GIM
 Esercizi di Grafica in movimento (2023)
 
-[carte](Esercizio_1B/Carte.html)
+[carte](Esercizio 1B/Carte.html)
