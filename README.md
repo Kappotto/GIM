@@ -2,7 +2,7 @@
 Esercizi di Grafica in movimento (2023)
 
 
-
+Daje Roma Fozza Naboli
 
 
 [acceso_spento_2](Esercizio_1A/acceso_spento_2.html)   
