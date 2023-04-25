@@ -15,3 +15,5 @@ Esercizi di Grafica in movimento (2023)
 [spostamento_3](Esercizio_1A/spostamento_3.html)
 
 [carte](Esercizio_1B/Carte.html)
+
+[parole](Esercizio_2A/index.html)
