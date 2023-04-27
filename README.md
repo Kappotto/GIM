@@ -14,6 +14,6 @@ Daje Roma Fozza Naboli
 [spostamento_2](Esercizio_1A/spostamento_2.html)     
 [spostamento_3](Esercizio_1A/spostamento_3.html)    
 
-[carte](Esercizio_1B/carte.html)
+[carte](Esercizio_1B/Carte.html)
 
 [parole](Esercizio_2A/index.html)
