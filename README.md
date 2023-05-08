@@ -2,9 +2,6 @@
 Esercizi di Grafica in movimento (2023)
 
 
-Daje Roma Fozza Naboli
-
-
 [acceso_spento_2](Esercizio_1A/acceso_spento_2.html)   
 [acceso_spento_3](Esercizio_1A/acceso_spento_3.html)   
 [aperto_chiuso_2](Esercizio_1A/aperto_chiuso_2.html)    
