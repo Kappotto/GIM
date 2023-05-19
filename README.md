@@ -19,3 +19,8 @@
 
 ## Es2B 
 [atomic_bomb](Esercizio_2B/atomic_bomb.html)  
+
+## Es2.1B  
+[vietnam](Esercizio_2.1B/vietnam.html) 
+
+
