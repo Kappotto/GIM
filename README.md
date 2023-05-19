@@ -15,4 +15,7 @@
 [carte](Esercizio_1B/carte.html)
 
 ## Es2A
-[parole](Esercizio_2A/index.html)
+[parole](Esercizio_2A/index.html)  
+
+## Es2B 
+[atomic_bomb](Esercizio_2B/atomic_bomb.html)  
