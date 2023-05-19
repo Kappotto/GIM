@@ -9,6 +9,6 @@ function draw(){
 
 	point(30, 30)
 	point(0, 0)
-
+    rect(60, 20, 120)
 	rect(100, 120, 120, 90)
 }

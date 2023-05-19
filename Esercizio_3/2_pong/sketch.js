@@ -3,21 +3,37 @@ let posY
 let velX
 let velY
 
+let posT
+let posT2
+let velR
+let velR2
+
 function setup(){
 	createCanvas(800, 400)
+	
 	posX = width/2
 	posY = height/2
-	velX = random(-10, 10)
-	velY = random(-10, 10)
+	velX = 10
+	velY = 10
+	posT = height/2
+	posT2 = height/2
+	
 
-	background(random(150), random(150), random(230, 255))
+	background(255, 255, 255)
 }
 
 function draw(){
+	background(255, 255, 255)
 noStroke()
-fill(random(150), random(150), random(230, 255))
+fill(0, 0, 0)
+rect(30, 20, 20, 70)
+rect(750, 20, 20, 70)
 
-rect(posX, posY, 150, 150)
+
+
+
+
+ellipse(posX, posY, 25, 25)
 posX = posX + velX
 posY = posY + velY
 
