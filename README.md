@@ -1,5 +1,5 @@
 # GIM
-## Esercizi di Grafica in movimento (2023)
+## Esercizi di Grafica in movimento (2023+2024)
 
 ## Es1A
 [acceso_spento_2](Esercizio_1A/acceso_spento_2.html)   
