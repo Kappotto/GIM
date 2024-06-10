@@ -24,8 +24,8 @@
 [vietnam](Esercizio_2.1B/vietnam.html) 
 
 ## Es3  
-[disegno](Esercizio_3/1_disegno/index.html) 
-[pong](Esercizio_3/2_pong/index.html) 
+[disegno](Esercizio_3/1_disegno/index.html)    
+[pong](Esercizio_3/2_pong/index.html)     
 
 
 
