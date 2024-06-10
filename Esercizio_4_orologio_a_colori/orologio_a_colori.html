@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>orologio_a_colori</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+		}
+        #hourList {
+            display: flex;
+            flex-wrap: wrap;
+            font-family: 'Times New Roman', Times, serif;
+            justify-content: top;
+            margin-bottom: 50px;
+			margin-top: 130px;
+			.colorText {
+            position: absolute;
+            top: -15px;
+            font-size: 0.8em;
+            color: black;
+        }
+        }
+        #hourRectangle {
+            width: 1920px;
+            height: 100px;
+		    background-color: #ff0000; /* Start color */
+            align-items: center;
+			justify-content: center;
+            display: flex;
+            font-size: 2em;
+			font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+			-webkit-text-stroke: rgb(0, 0, 0);
+			-webkit-text-stroke-width: 2px;
+            margin-bottom: 3px;
+        }
+        #minuteRectangle {
+            width: 1920px;
+            height: 100px;
+            background-color: #ff0000; /* Start color */
+            justify-content: center;
+            display: flex;
+			font-weight: bold;
+            align-items: center;
+            font-size: 2em;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(255, 255, 255);
+			-webkit-text-stroke: rgb(0, 0, 0);
+			-webkit-text-stroke-width: 2px;
+            margin-bottom: 20px;
+        }
+        #minuteList {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            font-family: 'Times New Roman', Times, serif;
+            margin-bottom: 20px;
+        }
+        .colorBox {
+            width: 22px;
+            height: 70px;
+            margin:1px;
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .colorText {
+            position: absolute;
+            bottom: -15px;
+            font-size: 0.8em;
+            color: black;
+        }
+		
+    </style>
+</head>
+<body>
+	<div id="hourList"></div>
+    <div id="hourRectangle">Loading...</div>
+    <div id="minuteRectangle">Loading...</div>
+    <div id="minuteList"></div>
+    <script>
+        const hourColors = [];
+        for (let i = 0; i < 24; i++) {
+            const hue = i / 24;
+            hourColors.push(`hsl(${hue * 360}, 100%, 50%)`);
+        }
+
+        const minuteColors = [];
+        for (let i = 0; i < 60; i++) {
+            const hue = i / 60;
+            minuteColors.push(`hsl(${hue * 360}, 100%, 50%)`);
+        }
+
+        function updateHourColor() {
+            const now = new Date();
+            const hour = now.getHours();
+            const hourRectangle = document.getElementById('hourRectangle');
+            hourRectangle.style.backgroundColor = hourColors[hour];
+            hourRectangle.textContent = hour;
+        }
+
+        function updateMinuteColor() {
+            const now = new Date();
+            const minute = now.getMinutes();
+            const minuteRectangle = document.getElementById('minuteRectangle');
+            minuteRectangle.style.backgroundColor = minuteColors[minute];
+            minuteRectangle.textContent = minute;
+        }
+
+        // Chiamiamo le funzioni per impostare l'orario corrente all'avvio della pagina
+        updateHourColor();
+        updateMinuteColor();
+
+        // Impostiamo gli intervalli per aggiornare l'orario ogni ora e ogni minuto
+        setInterval(updateHourColor, 3600000); // Update every hour
+        setInterval(updateMinuteColor, 600); // Update every second
+
+        const hourListDiv = document.getElementById('hourList');
+        for (let i = 0; i < 24; i++) {
+            const colorBox = document.createElement('div');
+            colorBox.className = 'colorBox';
+            colorBox.style.backgroundColor = hourColors[i];
+            colorBox.innerHTML = `<span class="colorText">${i}</span>`;
+            hourListDiv.appendChild(colorBox);
+        }
+
+        const minuteListDiv = document.getElementById('minuteList');
+        for (let i = 0; i < 60; i++) {
+            const colorBox = document.createElement('div');
+            colorBox.className = 'colorBox';
+            colorBox.style.backgroundColor = minuteColors[i];
+            colorBox.innerHTML = `<span class="colorText">${i}</span>`;
+            minuteListDiv.appendChild(colorBox);
+        }
+    </script>
+</body>
+</html>
