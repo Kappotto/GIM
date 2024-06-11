@@ -30,5 +30,7 @@
 ## Es4
 [orologio](Esercizio_4_orologio_a_colori/orologio_a_colori.html)   
 
+L'Orologio a Colori è un progetto che permette visualizzare l'ora e i minuti utilizzando rettangoli colorati. Ogni ora e minuto è rappresentato da un colore specifico, offrendo una rappresentazione visiva unica del tempo. L'orologio si sincronizza con l'orario del computer, aggiornandosi in tempo reale ogni secondo. Con un design semplice, questo orologio non è solo funzionale ma anche un elemento decorativo ludico.
+
 
 
