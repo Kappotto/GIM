@@ -100,21 +100,26 @@
             minuteColors.push(`hsl(${hue * 360}, 100%, 50%)`);
         }
 
-        function updateHourColor() {
-            const now = new Date();
-            const hour = now.getHours();
-            const hourRectangle = document.getElementById('hourRectangle');
-            hourRectangle.style.backgroundColor = hourColors[hour];
-            hourRectangle.textContent = hour;
+       function padZero(num) {
+            return num < 10 ? '0' + num : num;
         }
 
-        function updateMinuteColor() {
-            const now = new Date();
-            const minute = now.getMinutes();
-            const minuteRectangle = document.getElementById('minuteRectangle');
-            minuteRectangle.style.backgroundColor = minuteColors[minute];
-            minuteRectangle.textContent = minute;
-        }
+        function updateHourColor() {
+    const now = new Date();
+    const hour = now.getHours();
+    const hourRectangle = document.getElementById('hourRectangle');
+    hourRectangle.style.backgroundColor = hourColors[hour];
+    hourRectangle.textContent = padZero(hour);
+}
+
+function updateMinuteColor() {
+    const now = new Date();
+    const minute = now.getMinutes();
+    const minuteRectangle = document.getElementById('minuteRectangle');
+    minuteRectangle.style.backgroundColor = minuteColors[minute];
+    minuteRectangle.textContent = padZero(minute);
+}
+
 
         // Chiamiamo le funzioni per impostare l'orario corrente all'avvio della pagina
         updateHourColor();
@@ -125,22 +130,22 @@
         setInterval(updateMinuteColor, 600); // Update every second
 
         const hourListDiv = document.getElementById('hourList');
-        for (let i = 0; i < 24; i++) {
-            const colorBox = document.createElement('div');
-            colorBox.className = 'colorBox';
-            colorBox.style.backgroundColor = hourColors[i];
-            colorBox.innerHTML = `<span class="colorText">${i}</span>`;
-            hourListDiv.appendChild(colorBox);
-        }
+for (let i = 0; i < 24; i++) {
+    const colorBox = document.createElement('div');
+    colorBox.className = 'colorBox';
+    colorBox.style.backgroundColor = hourColors[i];
+    colorBox.innerHTML = `<span class="colorText">${padZero(i)}</span>`;
+    hourListDiv.appendChild(colorBox);
+}
 
-        const minuteListDiv = document.getElementById('minuteList');
-        for (let i = 0; i < 60; i++) {
-            const colorBox = document.createElement('div');
-            colorBox.className = 'colorBox';
-            colorBox.style.backgroundColor = minuteColors[i];
-            colorBox.innerHTML = `<span class="colorText">${i}</span>`;
-            minuteListDiv.appendChild(colorBox);
-        }
+const minuteListDiv = document.getElementById('minuteList');
+for (let i = 0; i < 60; i++) {
+    const colorBox = document.createElement('div');
+    colorBox.className = 'colorBox';
+    colorBox.style.backgroundColor = minuteColors[i];
+    colorBox.innerHTML = `<span class="colorText">${padZero(i)}</span>`;
+    minuteListDiv.appendChild(colorBox);
+}
     </script>
 </body>
 </html>
